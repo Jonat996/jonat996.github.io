@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css?family=Creepster');
+:root {
+  --background: #0F2F3C;
+  --skin: #8EC83E;
+  --black: #10122B;
+  --white: #fff;
+  --brain: #fc76a3;
+  --tooth: #FFF998;
+  --slime: #DAE21C;
+}
+body{
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #10122B;
+}
+.contenedor{
+  background-color: #223d47;
+  width: 390px;
+  height: 520px;
+  border-radius: 22px;
+  position:absolute;
+  box-shadow: 0px 0px 5px 0px var(--black);
+  font-family: 'Kanit', sans-serif;
+margin-bottom: 5px;
+text-shadow: 0px 3px 3px rgba(15, 12, 12, 0.5),0px -1px 1px rgba(0,0,0,.3);
+}
+.header{
+  border-radius: 55px;
+  
+  height: 150px;
+margin-top: 10px;
+margin-bottom: 10px;  
+  position: relative;
+  margin-left: 7px;
+  margin-right: 7px;
+  
+}
+
+.resultado{
+  height: 100px;
+color:rgb(8, 8, 8);
+margin-top: 25px;
+box-shadow: inset 0px 0px 10px 0px var(--black);
+margin-bottom: 10px;
+position: relative;
+overflow: hidden;
+
+}
+#operacion{
+  color: gray;
+  text-align: left;
+  position: absolute;
+  font-size: 35px;
+  padding-left: 10px;
+  
+}
+#res{
+  color: gray;
+padding-top: 25px;
+ padding-right: 5px;
+  font-size: 55px;
+  text-align: right;
+margin-bottom: 18px;
+
+word-wrap: break-word;
+
+
+
+}
+.escritura{
+  font-size: 40px;
+  height: 48px;
+  text-align: right;
+  box-shadow: inset 0px 0px 10px 0px var(--black);
+  margin-bottom: 5; 
+  overflow: hidden;
+}
+
+#write{ 
+padding-right: 5;
+padding-bottom: 15;
+word-wrap: break-word;
+
+}
+.teclado{
+  width: 380px;
+  display: flex; /*Convertimos al menú en flexbox*/
+  justify-content: space-between; /*Con esto le indicamos que margine todos los items que se encuentra adentro hacia la derecha e izquierda*/
+  align-items: center; /*con esto alineamos de manera vertical*/
+  user-select: none;
+  margin-bottom: 10px;
+  margin-top: 30px;
+  margin-left: 7px;
+  margin-right: 7px;
+
+font-weight: bold;
+
+}
+.numeros{
+box-shadow: inset 0px 0px 10px 0px var(--black);
+ width: 80%;
+ height: 285px;
+ border-radius: 20px;
+display:grid;
+grid-template-columns: repeat(3,90px);
+grid-template-rows: 30px, repeat(4,10px);
+padding-left: 5;
+
+padding-right: 5;
+padding-top: 5;
+padding-bottom:5;
+margin-left: 10px;
+
+}
+.numeros span{
+  text-align: center;
+  font-size: 35px;
+padding-top:15 ;
+  border-radius: 20px;
+  box-shadow: 5px 5px 0px -3px #00000040, -5px -5px 15px 3px #00000040 ;
+  
+}
+.operacion{
+  
+  box-shadow: inset 0px 0px 10px 0px var(--black);
+ width: 15%;
+ height: 28s5px;
+text-align: right;
+margin-right: 10px;
+margin-left: 10px;
+border-radius: 8px;
+padding-left: 5px;
+padding-right: 9px;
+padding-top: 5px;
+padding-bottom: 5px;
+display:grid;
+grid-template-columns: repeat(1,60px);
+grid-template-rows: 10px, repeat(7,10px);
+
+}
+.op{
+  font-size: 30px;
+  text-align: center;
+  padding-top:5;
+  border-radius: 5px;
+  box-shadow: 5px 5px 0px -3px #00000040, -5px -5px 15px 3px #00000040 ;
+  
+}
+img{
+  padding-bottom: 5px;
+}
+
+/* .foot{
+  font-size: 42px;
+  margin-left: 21%;
+
+}
+ */.teclado span:hover{
+
+  background-color: rgb(43, 77, 77);
+  padding-top: -2px;
+  padding-left: 4px;
+  padding-right: 4px;
+  box-shadow: 0px 0px 5px 0px var(--black);
+  cursor: pointer;
+  
+}
+hr{
+
+  margin-top: 7px;
+  border-color: darkgray;
+}

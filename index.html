@@ -1,4 +1,4 @@
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -6,52 +6,40 @@
     <link rel="stylesheet" href="styles/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&display=swap" rel="stylesheet">
-    <script src="js/Back.js"></script>
-    <title>Proyecto</title>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Varela+Round&display=swap" rel="stylesheet">
+<script src="script/game.js"></script>    
+<title>Tres en Raya</title>
 </head>
 <body>
-  <div class="contenedor">
-
+   <div class="container">
     <div class="header">
-        <div class="resultado">
-            <span id="operacion"></span>
-            <div id="res"></div>
+        <h1 class="title">TRIQUI</h1>
+        <input type="text" name="name" id="player1" class="head" placeholder="Jugador 1" value="jugador 1">
+        <div class="score">
+            <span id="sp1">0</span>|<span id="sp2">0</span>
         </div>
-        <hr>
-        <div class="escritura">
-            <div id="write"></div>
-        </div>
-        <hr>
-    </div>
- 
-    <div class="teclado">
-        <div class="numeros">
-            <span class="num" onclick="mostrar(1)">1</span>
-            <span class="num" onclick="mostrar(2)">2</span>
-            <span class="num" onclick="mostrar(3)">3</span>
-            <span class="num" onclick="mostrar(4)">4</span>
-            <span class="num" onclick="mostrar(5)">5</span>
-            <span class="num" onclick="mostrar(6)">6</span>
-            <span class="num" onclick="mostrar(7)">7</span>
-            <span class="num" onclick="mostrar(8)">8</span>
-            <span class="num" onclick="mostrar(9)">9</span>
+        <input type="text" name="name" id="player2" class="head" placeholder="Jugador 2" value="jugador 2">
 
-             
-            <span class="foot" onclick="mostrar('.')">.</span>
-            <span class="foot" onclick="mostrar(0)"> 0</span>
-            <span class="foot "onclick="resultado()">=</span></div>
-        <div class="operacion">
-            <span class="op" onclick="borrar()"><img src="/img/icons8-símbolo-vaciar-24.png" alt="" srcset=""></span>
-            <span class="op" onclick="resetData()">C</span>
-            <span class="op" onclick="cambio('+')" >+</span>
-            <span class="op" onclick="cambio('-')" >-</span>
-            <span class="op" onclick="cambio('*')" >x</span>
-            <span class="op" onclick="cambio('/')" >÷</span>
-            
+    </div>
+    <div class="game">
+        <div class="tablero">
+            <span id="1" onclick="pintarFigura('1')"></span>
+            <span id="2" onclick="pintarFigura('2')"></span>
+            <span id="3" onclick="pintarFigura('3')"></span>
+            <span id="4" onclick="pintarFigura('4')"></span>
+            <span id="5" onclick="pintarFigura('5')"></span>
+            <span id="6" onclick="pintarFigura('6')"></span>
+            <span id="7" onclick="pintarFigura('7')"></span>
+            <span id="8" onclick="pintarFigura('8')"></span>
+            <span id="9" onclick="pintarFigura('9')"></span>
         </div>
     </div>
-   
-  </div>
+   </div>
+   <dialog id="modal" >
+    <h3 id="winner">El ganador es Jonathan</h3>
+    <button onclick="nuevaPartida()">Reiniciar</button>
+</dialog>
+
+    
 </body>
 </html>
