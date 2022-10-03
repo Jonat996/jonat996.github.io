@@ -10,19 +10,30 @@ let score1=0;
 let score2=0;
 let nuevoJuego=false;
 
+
 asignarFigura = () => {
   if (turno == 1) {
     figura = "X";
     turno = 2;
+    document.getElementById("player1").style.color="gray";  
+    document.getElementById("player2").style.color="white";
   } else if (turno == 2) {
     figura = "O";
     turno = 1;
+    document.getElementById("player1").style.color="white";
+    document.getElementById("player2").style.color="gray";
+  
   }
 };
 pintarFigura = (posicion) => {
+  if(Ganador){
+    return false;
+  }
   asignarFigura();
-  ingresarFigura(posicion);
-  document.getElementById(posicion).innerHTML = figura;
+  if(ingresarFigura(posicion)){
+    document.getElementById(posicion).innerHTML = figura;
+    document.getElementById(posicion).style.pointerEvents="none";
+  }
   validarPartida();
 };
 
@@ -40,9 +51,13 @@ const ingresarFigura = (posicion) => {
     for (let j = 0; j < Tabla[0].length; j++) {
       if (posicion == Tabla[i][j]) {
         Tabla[i][j] = figura;
+        console.log("sisepudonea")
+        return true;
+
       }
     }
   }
+  return false;
 };
 const validarTabla = () => {
   let puntos = 0;
@@ -146,9 +161,66 @@ const  limpiarVista=()=>{
         document.getElementById("7").innerHTML = ""; 
         document.getElementById("8").innerHTML = ""; 
         document.getElementById("9").innerHTML = ""; 
-        
+        document.getElementById('1').style.pointerEvents="all";
+        document.getElementById('2').style.pointerEvents="all";
+        document.getElementById('3').style.pointerEvents="all";
+        document.getElementById('4').style.pointerEvents="all";
+        document.getElementById('5').style.pointerEvents="all";
+        document.getElementById('6').style.pointerEvents="all";
+        document.getElementById('7').style.pointerEvents="all";
+        document.getElementById('8').style.pointerEvents="all";
+        document.getElementById('9').style.pointerEvents="all";
+
+      }
+
+const keyboard=()=>{
+  let tecla= event.keyCode;
+
+  if(tecla==96){
+    alert("si gonorrea")
+    
 }
+
+if(tecla==97){
+    pintarFigura('7');
+
+}
+
+if(tecla==98){
+    pintarFigura('8');
+}
+
+if(tecla==99){
+    pintarFigura('9');
+}
+
+if(tecla==100){
+    pintarFigura('4');
+}
+
+if(tecla==101){
+    pintarFigura('5');
+}
+
+if(tecla==102){
+    pintarFigura('6');
+}
+
+if(tecla==103){
+    pintarFigura('1');
+}
+
+if(tecla==104){
+    pintarFigura('2');
+}
+if(tecla==105){
+    pintarFigura('3');
+}
+}
+window.onkeydown=keyboard;
 window.onload = () => {
   iniciarTabla();
+ 
   
 };
+

@@ -14,8 +14,9 @@ body{
     flex-wrap: wrap;
 }
 h1{
-    padding-left: 45%;
-    padding-right: 45%;
+    text-align: center;
+    width: 100%;
+    margin: auto;
     font-size: 50px;
 }
 input{
@@ -33,7 +34,8 @@ input{
 }
 .score{
     font-size: 34px;
-    padding-top: 45px;
+    padding-top: 20px;
+    padding-bottom: 20px;
     padding-left: 15px;
     padding-right: 15px;
 }
@@ -77,19 +79,21 @@ background-color: rgba(0, 0, 0, 0.5);
 }
 
 #modal{
+    
    text-align: center;
     max-width: 800px;
-    animation-name: modal;
-    animation-duration:3s;
     background:#470000;
     font-size: 50px;
     overflow: hidden;
     align-items: center;
     justify-content: center;
-    border-radius: 20px;   
+    border-radius: 20px;
+    animation-name: modal;
+    animation-duration:3s;
 
     
 }
+
 #modal button{
     font-size: 20px;
     background-color: #470000;
@@ -106,12 +110,12 @@ background-color: rgba(0, 0, 0, 0.5);
 }
 
 @keyframes modal{
-0%{
+20%{
 transform: translateY(-150vh);
 width: 100px;
-height: 200px;   
+height: 150px;   
 }
-0%{
+20%{
     transform: rotate(360deg);
 }
 50%{
@@ -122,8 +126,6 @@ height: 200px;
     width: 400px;
     height: 400px;
 }
-
-
 }
 @keyframes prueba{
     100%{transform: rotate(360deg);}

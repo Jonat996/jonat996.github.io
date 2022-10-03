@@ -1,0 +1,45 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:wght@300&family=Varela+Round&display=swap" rel="stylesheet">
+<script src="script/game.js"></script>    
+<title>Tres en Raya</title>
+</head>
+<body>
+   <div class="container">
+    <div class="header">
+        <h1 class="title">TRIQUI</h1>
+        <input type="text" name="name" id="player1" class="head" placeholder="Jugador 1" value="jugador 1">
+        <div class="score">
+            <span id="sp1">0</span>|<span id="sp2">0</span>
+        </div>
+        <input type="text" name="name" id="player2" class="head" placeholder="Jugador 2" value="jugador 2">
+
+    </div>
+    <div class="game">
+        <div class="tablero">
+            <span id="1" class="board" onclick="pintarFigura('1')" ></span>
+            <span id="2"  class="board" onclick="pintarFigura('2')"></span>
+            <span id="3" class="board" onclick="pintarFigura('3')"></span>
+            <span id="4" class="board" onclick="pintarFigura('4')"></span>
+            <span id="5" class="board" onclick="pintarFigura('5')"></span>
+            <span id="6" class="board" onclick="pintarFigura('6')"></span>
+            <span id="7" class="board" onclick="pintarFigura('7')"></span>
+            <span id="8" class="board" onclick="pintarFigura('8')"></span>
+            <span id="9" class="board" onclick="pintarFigura('9')"></span>
+        </div>
+    </div>
+   </div>
+   <dialog id="modal" >
+    <h3 id="winner">El ganador es Jonathan</h3>
+    <button onclick="nuevaPartida()">Reiniciar</button>
+</dialog>
+
+    
+</body>
+</html>
